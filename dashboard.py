@@ -21,8 +21,8 @@ def load_student_data(file_path):
     return df
 
 # Where your file is saved on your computer
-FILE_PATH = "student_dropout_risk_2026.csv"
-try:
+    FILE_PATH = "student_dropout_risk_2026.csv"
+    try:
     # 1. GET THE DATA
     df = load_student_data(FILE_PATH)
     
