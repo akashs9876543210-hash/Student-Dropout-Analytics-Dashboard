@@ -20,9 +20,10 @@ def load_student_data(file_path):
                                  labels=['Urban (Local)', 'Suburban', 'Rural (Distant)'])
     return df
 
-# Where your file is saved on your computer
-    FILE_PATH = "student_dropout_risk_2026.csv"
-    try:
+# Relative path so it works perfectly on Streamlit Cloud
+FILE_PATH = "student_dropout_risk_2026.csv"
+
+try:
     # 1. GET THE DATA
     df = load_student_data(FILE_PATH)
     
@@ -167,9 +168,3 @@ def load_student_data(file_path):
 
 except Exception as e:
     st.error(f"Could not load the file. Please check your file path. Error: {e}")
-    
-    
-    
-    
-    
-    
